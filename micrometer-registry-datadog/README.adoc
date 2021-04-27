@@ -1,0 +1,22 @@
+# Datadog Micrometer Registry
+
+---
+
+.Configuration
+[source, properties]
+----
+quarkus.micrometer.export.datadog.enabled=true <1>
+quarkus.micrometer.export.datadog.publish=true <2>
+quarkus.micrometer.export.datadog.apiKey=6e7fc99962071a5200c61b907b05259a <3>
+quarkus.micrometer.export.datadog.step=10s <4>
+quarkus.micrometer.export.datadog.uri=https://api.datadoghq.com <5>
+----
+<1> Support for Datadog micrometer will be enabled.
+<2> Attribute to selectively disable publication of metrics in some environments.
+<3> Datadog API Key.
+<4> Datadog publish step interval. The default is 1 minute (1m).
+<5> Datadog publish URI must be configured according to your account region. Default URI is US1 `https://api.datadoghq.com`.
+
+## Datadog URI Configuration Reference
+
+https://docs.datadoghq.com/getting_started/site/
